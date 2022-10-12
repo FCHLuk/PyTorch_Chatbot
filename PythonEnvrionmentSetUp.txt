@@ -1,0 +1,8 @@
+On Prodigy16 laptop: Python Virtual Environments are under C:\Python_virtual_environments
+
+python.exe -m venv venvChat <----run this to create VE (done for python chatbot under C:\Python_chatbox\chatbot-deployment-main)
+==========================================
+
+To activate VE, CD to C:\Python_virtual_environments. Then run the following.
+
+venvChat\Scripts\activate.bat  <----run this to activate

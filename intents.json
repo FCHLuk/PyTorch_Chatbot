@@ -1,0 +1,1007 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [ "Hi there", "How are you", "Is anyone there?", "Hey", "Hola", "Hello", "Good day" ],
+            "responses": [ "Hello, How are you today?", "Hi there, how can I help?" ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [ "Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time" ],
+            "responses": [ "See you!", "Have a nice day", "Bye! Come back again soon." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [ "Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me" ],
+            "responses": [ "Happy to help!", "Any time!", "My pleasure" ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "noanswer",
+            "patterns": [],
+            "responses": [ "Sorry, can't understand you", "Please give me more info", "Not sure I understand" ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "EC_install",
+            "patterns": [ "EspressChart fails to install on Solaris", "EspressChart fails to install on PC", "EspressChart fails to install", "Cannot install EspressChart", "EC fails to install", "Cannot install EC" ],
+            "responses": [ "The most common problem is out of disk space. If you have an older version of EspressChart, please stop the EspressManager in the service control panel before installation. For newer version of EspressChart, please unzip the downloaded zip file, and run the class file inside with your Java Virtual Machine. You must have about 125MB of free disk space before install. This free space should be in ./var/tmp directory in Solaris if espresschart.sh is in the same tmp directory" ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "no_class_found",
+            "patterns": [ "Why do I have no class found error on JVM installation?", "I have no class found error." ],
+            "responses": [ "You need to recheck spelling and use all-lower-case for espresschart." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "EspressManager",
+            "patterns": [ "EspressManager cannot start", "I cannot start EspressManager", "EspressManager error" ],
+            "responses": [ "Please go to command prompt and start your espressmanager.bat there. Check the error messages and set proper path or classpath on your computer." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "no_web_server",
+            "patterns": [ "I do not have a Web server on my machine", " no web server", "web server" ],
+            "responses": [ "You may install EspressChart anywhere, and use designer.bat to run EspressChart as an application. You may not use the browser to run espresschart if you are running without a Web Server." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "file_not_found",
+            "patterns": [ "Cannot login to Solaris java.io.FileNotFoundException", "Cannot login to Solaris", "java.io.FileNotFoundException error" ],
+            "responses": [ "File protection on EspressChart folder and its subdirectories has to be removed after installation on a Solaris machine." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "solaris_no_applet",
+            "patterns": [ "Solaris displayed no login applet, and API examples hung", "API examples problem", "solaris no login" ],
+            "responses": [ "Run appletviewer example1.html produced 'cannot convert string error', indicated jdk problems on Solaris." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "oracle_with_EC",
+            "patterns": [ "Does Oracle 9iAS work with EspressChart and its servlets?", "Does Oracle Application server work with EC",  "Oracle Application Server work with EspressChart" ],
+            "responses": [ "Yes, Oracle 9iAS Application Server requires CLASSPATH settings in XML files for the servlets to work." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "IBM_with_EC",
+            "patterns": [ "Does EspressChart run on IBM AS400, RS6000 ?", "IBM AS400, RS600 supported by EC" ],
+            "responses": [ "EspressChart was successfully tested and deployed on IBM AS400 and RS6000 models with Web Sphere server. A graphic card or Xvfb is required on AS400 for the EspressChart-associated servlets to run. Oracle 9iAS Application Server requires CLASSPATH settings in XML files for the servlets to work." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "EC_with_db2",
+            "patterns": [ "Does EspressChart connect to DB2?", "Can EsperssChart access DB2", "Can EC work with DB2", "How does EC work with DB2" ],
+            "responses": [ "You need to install EspressChart with java instead of jview for the DB2 database connection to work." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "failed_register_license",
+            "patterns": [ "What should I do if I failed to register license in the EC installation?", "failed register EspressChart license", "EC license failed" ],
+            "responses": [ "In EC installation, if you failed to register license, you can go to http://www.quadbase.com/license-registration-1/ to get a new qblicense.jar, , copy the new jar file and replace the original one in <EC>/lib/ directory." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "move_ec_licennnse",
+            "patterns": [ "How to move a licensed EC from one machine to another?", "move EC linese", "how to move license from one machine to another", "move EspressChart linese" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#ii10 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "failed_to_login",
+            "patterns": [ "I get the message Failed to login can't contact server at ....", "login error cannot contact server", "Failed to login, can't contact server at ...."],
+            "responses": [ "Check whether you have started EspressManager. You may start EspressManager either as an application (run espressmanager.bat which is in the EspressChart directory), or under Windows you can start EspressManager as a service (select Services in the Control Panel and start EspressManager)." ],
+            "context": [ "" ]
+        },
+        
+        {
+            "tag": "failed_to_login_EspressManager",
+            "patterns": [ "I get the message Failed to login: cannot connect to EspressManager at localhost", "localhost login error", "localhost connect EspressManager error", "can't connect localhost EspressManager" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#re2 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "database_connection_failed_datasource",
+            "patterns": [ "I get the message Failed to connect to database ... data source name not found", "database connection failed", "can't find data source name", "database connection problem, data source name not found" ],
+            "responses": [ "The database to which you are trying to connect has not been registered as a System Data Source (not User Data Source) on the system that EspressManager is located (not the client machine) or you have mistyped its name." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "database_contetion_failed_sun",
+            "patterns": [ "I get the message Failed to connect to database sun/jdbc/odbc/JdbcOdbcDriver", "sun.jdbc.odbc.JdbcOdbcDrive error", "message sun.jdbc.odbc.JdbcOdbcDrive failed" ],
+            "responses": [ "You need to change ODBC driver from Sun to Microsoft. This is accomplished by replacing in the Driver window sun.jdbc.odbc.JdbcOdbcDriver by com.ms.jdbc.odbc.JdbcOdbc Driver." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "start_EC",
+            "patterns": [ "Do I need to start EspressManager on each client machine?", "how to run EspressManager on client machine", "EspressManager on webserver" ],
+            "responses": [ "No, you only need to start EspressManager on your web server machine. You need to buy an additional license in order to run EspressManager on more than one web server machine." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "EC_java",
+            "patterns": [ "What Java version can I use with EspressChart?", "java version for EC", "what java version should I use for EC", "EspressManager java version" ],
+            "responses": [ "EspressChart supports any Java version, the equivalent of Oracle's JDK 1.5 and higher.  Specifically ported JVMs include Sun, IBM, and BEA.  Note that the applet viewers require the Java plug-in to be installed in the client browser." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "data_registry",
+            "patterns": [ "A Data Registry issue with Java8.", "java8 error in data registry", "data registry problem java8" ],
+            "responses": [ "Java8 has stopped supporting jdbc-odbc bridge connection. The ODBC Datasource connection in DataRegistry is still working with lower versions of java such as Java7, but not Java8. Available workaround must be used for ODBC connection to Access database if Java8 were used." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "file_path",
+            "patterns": [ "What file paths should I use?", "correct file path", "recommended file path" ],
+            "responses": [ "Give the full path of the file including drive (e.g.. c:/Program Files/EspressChart/help/examples/data/sample.dat) or give the relative path of the file from the EspressChart root directory (e.g.. help/examples/data/sample.dat)." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "auto_scaling",
+            "patterns": [ "Why Auto Scaling does not work if all input data are between 0.0 and 0.99?", "autoscaling not working for data between 0.0 and 0.99", "scaling does not work" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#re9 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "no_data_to_plot",
+            "patterns": [ "After Chart Designer obtains data from database successfully, it gives a 'java.lang.IllegalArgumentException: No numeric data to plot' error while creating chart.", "no numeric data to plot", "error no numeric data to plot" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#re10 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "chart_gallery",
+            "patterns": [ "When I ran Chart Gallery from www.quadbase.com, I got Failed to load data from file java.netNoRouteToHostException.", "chart gallery error", "Failed to load data from file java.netNoRouteToHostException" ],
+            "responses": [ "Are you behind a firewall? The EspressManager running on Quadbase Website requires a connection on port 8080. It looks like you are not able to connect to that port because of a firewall. Please download the evaluation version and install it on your local machine. You can access the same Chart Gallery there." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "chart_jdbc",
+            "patterns": [ "Chart does not work with my JDBC driver", "JDBC error", "chart JDBC driver", "My JDBC driver does not work with chart" ],
+            "responses": [ "Modify EspressManager.bat to include the JDBC driver in the classpath and restart EspressManager. If this does not work, please test your JDBC driver using bridgeTest/test.bat (after modifying test.bat to include the classpath of your JDBC driver). The test can be performed by modifying test.bat to include the JDBC driver file and modifying info.txt to include the database details. If the test fails, please hand the code bridgeTest/TestDB.java to your JDBC driver vendor to investigate." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "EC_pure_java",
+            "patterns": [ "Is EspressChart written in 100% pure Java?", "Is EC written in 100% pure Java?", "EC written in pure Java?" ],
+            "responses": [ "Yes, Chart Viewer, Chart Designer, Chart API, and even EspressManager are all written in 100% pure Java. EspressChart has been tested to work well with Internet Explorer 6+, Safari, Firefox and Chrome browsers." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "qb_label",
+            "patterns": [ "How can I get rid of the small label 'Quadbase Systems Evaluation Copy only' in the lower section of my charts?", "Quadbase Systems Evaluation Copy only", "evaluation label in charts", "quadbase watermark in reports", "quadbase watermark" ],
+            "responses": [ "The label is removed in the purchased version of EspressChart. If you have purchased EspressChart and the watermark didn't go away, please contact our support." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "url_image",
+            "patterns": [ "The image does not appear for the URL in the image dialog box", "no image for url", "url image error" ],
+            "responses": [ "Please note that you cannot specify an image from a machine other than the one on which Chart Designer is loaded, due to an applet security restriction." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "background_image",
+            "patterns": [ "The background image does not appear after I move my .cht or .tpl file from one server to another", "background image does not work after I move files", "background image problem" ],
+            "responses": [ "Save the chart as .pac and the background image will be added to the file automatically, allowing you to easily move/archive the chart. If you really want to use .tpl or .cht files, you need to copy the background image to the new server also. If the url is http://oldmachine/path1/path2/test.gif then Chart Viewer will find the new background image from http://newmachine/path1/path2/test.gif" ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "chart_print",
+            "patterns": [ "How can I print the charts produced by EspressChart?", "printing charts", "EC print charts", "EspressChart print charts" ],
+            "responses": [ "You can write a simple API program as shown in Example 9 to export the chart in a gif/JPEG file using the EspressManager and spawn a browser to load the image back (you may need to press the reload button of the browser to load the new image) and print it." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "chart_viewer",
+            "patterns": [ "When I publish the chart on the Web using Chart Viewer, the remote users get an error message 'Class Not found'", "remote users Class Not found ", "chart viewer Class Not found" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#re18 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "chart_viewer_parameters",
+            "patterns": [ "How can I set other parameters such as font, color, background, etc. in Chart Viewer?", "Chart Viewer parameters", "Chart Viewer change font", "Chart Viewer change color", "Chart Viewer change font" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#re19 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "file_formats",
+            "patterns": [ "What is the difference between the .pac, .tpl and .cht file formats?", "file formats difference", "the file formats used in the product" ],
+            "responses": [ "A .pac file contains everything (except for data source) that the chart needs including its data, background images etc. A .cht file also contains the actual data to plot which .tpl does not. All three file formats contain the data source information which can be used to schedule the data to reload from database. For a .cht and .pac file it contains data to plot so the chart look the same every time it is loaded. For .tpl file it fetches the updated data from database every time it is loaded, so it takes longer time for it to appear, and the chart may look different from time to time." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "set_classpath",
+            "patterns": [ "How do I set additional classpath (e.g. jdbc driver) when start as a service in NT?", "how to set classpath", "classpath when start as service in NT" ],
+            "responses": [ "Please edit and remove all the -cp items in espresschartserviceschserver.ini file, and put them with added zip or jar files, in controlPanelsystemenvironment as a system classpath. All the zip and jar files must be added to CLASSPATH in one command line." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "out_of_memory",
+            "patterns": [ "I got an Exception 'Out of Memory'", "out of memory", "error out of memory" ],
+            "responses": [ "This indicates that either the Chart Designer or EspressManager has run out of memory. To increase the memory for either component, modify EspressManager.bat, designer.bat generated by the installation and substitute the following argument -Xmx128M before the '-classpath' argument, to '-Xmx256M', will increase the heap size of the Java process to 256 megabytes. You can allot more memory as your system allows." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "labels",
+            "patterns": [ "The labels in the x-axis are too dense i.e., the labels are overlapping each other.  How do I make it look better ?", "how make labels look good", "how make labels look better", "overlapping labels" ],
+            "responses": [ "You can set the label display step size under Format → Axis Elements →  Label Step Interval in Chart Designer. You can also click on the Format value elements icon in the toolbar." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "labels_lenght_limit",
+            "patterns": [ "Are there any limitations on the length of characters in labels?", "labels length limit" ],
+            "responses": [ "There is no practical limitation on the length of string in a label." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "labels_type_limit",
+            "patterns": [ "Are there any limitations on the type of characters in labels?", "labels type of character limit" ],
+            "responses": [ "There is no practical limitation however, the use of a single quote in a string will cause plotting errors on data refresh." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "grid",
+            "patterns": [ "The x/y grid in the chart is too dense.", "how make grid look better", "how make grid look good" ],
+            "responses": [ "You can set the grid step size in the axis label dialog box (under Edit-Axis Label...) in Chart designer or use the GRID_STEPSIZE property in API." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "change_line_chart",
+            "patterns": [ "How can I change the Line Chart so that it will not draw at the origin?", "change line chart not to draw at origin", "line chart not to draw at the origin" ],
+            "responses": [ "You can set the X_SHIFT property in the API to displace the whole line chart away from the origin." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "shift_text",
+            "patterns": [ "Why does some of the text I add shift after the chart export?", "text shift after export", "export problem with text" ],
+            "responses": [ "EspressChart remembers the relative x, y ratio of the added text position relative to the drawing area. So when the size of the drawing area changes,  the text may shift. To avoid this, try to design and export the chart using the same size." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "EM_logs",
+            "patterns": [ "how do I remove the log file for EspressManager?", "remove logs for EspressManager", "EspressManager clear logs" ],
+            "responses": [ "You can edit the file server.log or java-charting/services/chserver.ini (for NT services) to remove the -log option." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "qbChart_constructors",
+            "patterns": [ "Why do the constructors for QbChart take Applet or Frame parameters?", "why constructors take applet parameter", "why constructors take frame parameter" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#re29 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "qbChart_constructors_info",
+            "patterns": [ "What info does the constructors for QbChart take from Applet or Frame parameters", "What info does EbChart take from parameters" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#re29 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "color_output",
+            "patterns": [ "The color of the output reduced to 256 when I export in Chart Designer even though my graphics display supports true color.", "color output reduced", "why Chart Designer reduce color output" ],
+            "responses": [ "This is a bug that happens in Netscape 3.x only.  In IE4.x and Netscape 4.x there is no such problem. Note that the color of the output depends on the no. of colors in your display card." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "scroll_bar",
+            "patterns": [ "The scroll bar is very annoying! How can I get rid of it?", "disable scroll bar ", "how to remove scroll bar" ],
+            "responses": [ "The scroll bars can be added or removed from the Format / canvas pull down menu of EspressChart 2.1 or higher." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "chart_size",
+            "patterns": [ "I don't like the current chart size. Can I make it bigger?", "how can I change chart size", "change chart size", "how to make chart bigger" ],
+            "responses": [ "One may either use Format / canvas in Chart Designer or right drag the mouse on the chart to increase its size." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "viewer_class_error",
+            "patterns": [ "Why does my browser say that it cannot find the quadbase.chartViewer.Viewer.class even though my classpath is set to the root EspressChart directory when I create a HTML file to view a .cht file through the Chart Viewer?", "Chart Viewer classpath", "how set classpath for chart viwever", "error cannot find the quadbase.chartViewer.Viewer.class" ],
+            "responses": [ "The EspressChart classpath is probably set as a system variable, and there may be a user classpath present without the EspressChart classpath.  Add the EspressChart classpath to the user classpath as well and run the HTML file again." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "EC_disappears",
+            "patterns": [ "How to solve the problem that EspressChart.jnlp launches then disappears at once on Windows 10 with JRE 10?", "windows10 EspressChart disappears", "W10 EC disappears", "EspressChart with JRE10 on Windows 10", "EC with JRE10 on Windows 10" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#re34 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "EC_telnet",
+            "patterns": [ "When we tried using EspressChart on a simple telnet session (rather than XTerm) it gives us an error (some X11 Windows error) ?", "EC telnet error", "EspressChart telnet error", "EC telnet session problem" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#suli1 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "unix_class_no_found",
+            "patterns": [ "When running EspressChart remotely from a Unix server (e.g. Solaris) without a display card, it gives us a 'quadbase.chart.C-string class not found error' or 'X11 not found error' when connecting to oracle database?", "Unix server class not found error", "quadbase.chart.C-string class not found error", "no display card on Unix server error" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#suli2 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "serverlet_no_found",
+            "patterns": [ "When we execute servlet in Solaris with JDK1,2 using API in EspressChart, it gives us a 'C-string not found error'?", "c string not found", "servlet in solaris error" ],
+            "responses": [ "The error is received because the X server cannot be connected to. This is a very deceptive exception. What you have to do is to start the X server under root and make sure it is accessible by EspressChart or the program running EspressChart API." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "c_string_not_found",
+            "patterns": [ "After X11R6 (Xvfb) started, EspressChart still gives 'quadbase/chart/C-string not found error'", "EC error c string not found", "Xvfb started but EC gives error " ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#suli4 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "xw_xvfb_alternative",
+            "patterns": [ "Are there alternatives to X-windows display and Xvfb?", "x windows display alternative", "xvfb alternative" ],
+            "responses": [ "One option is the PJA Toolkit. PJA Toolkit is a pure Java implementation of the Graphics Environment methods in Java, and does not use native code. Therefore, can also be used in place of an X-window, or XVFB. Click here to download documentation & sample file for the PJA Toolkit." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "x_server_background_Sun",
+            "patterns": [ "Commands to run X server in background for Sun", "how to run x server on Sun in background ", "can I run x server in background on Sun" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#suli6 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "x_server_background_Unix",
+            "patterns": [ "Commands to run X server in background for Unix", "how to run x server on Unix in background ", "can I run x server in background on Unix" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#suli6 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "EC_stored_procedures",
+            "patterns": [ "Does EspressChart support stored procedures?", "Does EC support stored procedures?", "stored procedures support" ],
+            "responses": [ "Yes, you can specify a stored procedure in the query. For the multiple result sets/response reply, EspressChart will use the first non-empty result set to plot the chart. The mechanism is the same for the code bridgeTest/TestDB.java in your EspressChart installation directory." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "EC_parametrized_queries",
+            "patterns": [ "Does EspressChart support parametrized queries?", "Does EC support parametrized queries?", "parametrized queries support" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#fe2 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "EC_object_oriented_db",
+            "patterns": [ "Does EspressChart support object-oriented databases as well as SQL queries?", "Does EC support object-oriented databases as well as SQL queries?", "EspressChart support object-oriented databases", "EC support object-oriented databases", "EC support SQL queries" ],
+            "responses": [ "No, but Chart API allows you to fetch the data from database your own method and pass the data as an argument in the constructor of chart. (see QbChart)." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "EC_data_fetching",
+            "patterns": [ "Does EspressChart support real-time data fetching from database when Chart Viewer is loaded?", "Does EC support real-time data fetching from database when Chart Viewer is loaded?", "EC real time data fetching from db" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#fe4 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "schedule_chart_viewer",
+            "patterns": [ "Can I schedule Chart Viewer to refresh itself from a database after a specified time interval?", "chart viewer refresh after specified time", "schedule chart viewer refreshing" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#fe5 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "own_datasource",
+            "patterns": [ "Can I get data from my own datasource and push the data to chart viewer to update it continuously?", "own datasource in chart viewer", "can chart viewer use my own data source and update it continuously" ],
+            "responses": [ "Yes, chart Viewer supports parameter server which allow users to push the data to the viewer. See the parameter server section in chart viewer." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "publish_chart",
+            "patterns": [ "Do I need to know programming or complicated EspressChart applet parameters in order to publish my own chart in the web?", "how to publish chart in the web", "Do I need to know programming or complicated EC applet parameters in order to publish my own chart on the web?" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#fe7 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "espress_manager_settings",
+            "patterns": [ "How can I specify to use EspressManager in different machine instead of the one in Web server?", "how to use different machine for EspressManager instead of the one in web server", "can I change EspressManager machine" ],
+            "responses": [ "You can specify the connection details in either the API code to connect to a different EspressManager by using the setServerAddress and setServerPort methods in QbChart." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "chart_settings",
+            "patterns": [ "Can I save/load/export the chart in client machine instead of server machine?", "can I save chart in client machine", "can I load chart in client machine", "can I export chart in client machine", "how to save / load / export the chart in client machine instead of server machine" ],
+            "responses": [ "You can eliminate the need for connecting to EspressManager by calling the static method setEspressManagedUsed(false), before creating the QbChart constructor. Now all save/load/export will have on the machine running the code, rather than the server machine." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "EC_java_beans",
+            "patterns": [ "Does EspressChart support JavaBeans?", "javabeans support", "does EC support JavaBeans" ],
+            "responses": [ "EspressChart 1.4 and higher support JavaBeans as component in an IDE environment." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "chart_format",
+            "patterns": [ "Can I export the chart in other formats?", "can I change chart formats", "chart formats" ],
+            "responses": [ "Yes, you can export the chart in GIF, JPG, PNG, BMP, WMF, WRL, FLASH, PDF, TPL and CHT format using either Chart Designer or the Chart API." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "EC_image_maps",
+            "patterns": [ "Does EspressChart support image maps?", "Does EC support image maps?", "EC image map support" ],
+            "responses": [ "Yes, you can define hyperlinks with different url and target in Chart Designer (see manual) or API (see example14.html). When chart is export in the GIF/JPEG and BMP formats, two files with extension .map (for client side image mapping) and _s.map (for server side image mapping) will be exported in the same directory as the image when the hyperlink is defined. You can then import this .map file in your html page easily. See document source in maparea3d.html." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "enviroment_classpath",
+            "patterns": [ "Is it necessary to install the classpath of EspressChart in the environment variable CLASSPATH in web server machine?", "install classpath to environment variable" ],
+            "responses": [ "No, the installation program add the classpath for programmer to use the API. You can safely remove the classpath from the environment variable CLASSPATH." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "data_to_html",
+            "patterns": [ "Can we pass data directly to the Chart Viewer in the html page?", "chart viewer data pass in the html", "how to pass data to the Chart Viewer in the html" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#fe14 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "change_EC_port_numbee",
+            "patterns": [ "How can I change the default port number of EspressChart?", "change EC port number", "how to change EspressChart port number " ],
+            "responses": [ "It is not a good idea to change the default port since EspressChart will use 22071 as the default one when it fails to load server.cfg. However, you can change it by editing the section [portno] in java-charting/userdb/config.txt. After that, restart the EspressManager (so that a new config file server.cfg is created), the Web server (since it may cache the old version of config file), and the browser (since it will cache the config file locally)." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "date_time_foramt",
+            "patterns": [ "Can EspressChart support different date/time formats?", "Can EC support different date/time formats?", "EC different date formats", "EC different time formats" ],
+            "responses": [ "Yes, EspressChart supports different formatting option of date/time, timestamp, boolean and numeric value. See the user's guide for details." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "format_documentation",
+            "patterns": [ "Where can I found documentation on NumericFormat, DateTimeFormat, LogicalFormat?", "numeric format documentation", "date time documentation", "logical format documentation" ],
+            "responses": [ "They are located in the apidocs under EspressChart/help/apidocs/index.html ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "trend_line_chart",
+            "patterns": [ "Why is the Trend Line missing in some charts?", "no trend line in chart", "trend line missing in chart" ],
+            "responses": [ "Currently, only 2-d charts of types Column, Stack Column, Area, Stack Area, Scatter, Line, HLCO and Hi-Low support Trend Line." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "parm_query_not_supported",
+            "patterns": [ "Parameterized query not working with error message 'Service does not support parameterized query'", "error Service does not support parameterized query", "parameterized query does not work" ],
+            "responses": [ "EspressManager has to start with EspressManager.bat for the Parameterized query to work. Please see the known bug list." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "api_message",
+            "patterns": [ "When using the API I got message 'Failed to read server.cfg, use default host and port no 22071'", "Failed to read server.cfg, use default host and port no 22071", "API error" ],
+            "responses": [ "The chart API is trying to contact EspressManager, but failed to locate the server.cfg file. You can either safely ignore this message (if the default is OK) or copy the server.cfg file from the espresschart installation directory (after EspressManager is started) to your program directory (or codebase directory of your program)." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "chart_api",
+            "patterns": [ "Can the Chart API do without EspressManager?", "can chart api work without EspressManager", "can chart api work alone" ],
+            "responses": [ "For operations that do not require contacting EspressManager, you may use the QbChart class static method: setChartServerUsed(false) which will replace the EspressManager with the current directory of espresschart." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "api_examples",
+            "patterns": [ "Where can I find more API examples?", "API examples", "examples of api use" ],
+            "responses": [ "The API examples are contained in EspressChart/help/examples/index.html." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "jar_size",
+            "patterns": [ "The jar files are too big. Can they be smaller?", "jar file size", "can jar file size be smaller?" ],
+            "responses": [ "One may select EspressAPI_2D.jar, or EspressAPI_3D.jar to replace EspressAPI.jar in your application if only 2D or 3D charts are needed." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "chart_center",
+            "patterns": [ "How can I put the chart at the center of the canvas?", "chart in center of canvas", "Is it possible to put the chart at the center of the canvas?" ],
+            "responses": [ "You may set the width and the height in API to (1-W)/2 and (1-H)/2 where W and H are the width and height of the chart. You can obtain W and H by using the getRelativeWidth and getRelativeHeight methods from the chart's canvas." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "api_data_transpose",
+            "patterns": [ "Where is the API information on data transpose?", "API information about data transpose", "API data transpose" ],
+            "responses": [ "The API is called isSpreadSheetFormat (boolean) and the documentation is located in helpapidocsquadbaseChartAPIQbChart.html" ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "column_mapping",
+            "patterns": [ "How do I specify the column mappings for the chart?", "column mapping for charts", "how to set column mappings for the charts" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#h1 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "decimal_point",
+            "patterns": [ "How do I set the decimal point?", "how can I set the decimal point" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#h2 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "thousand_separator",
+            "patterns": [ "How do I remove the thousand separators?", "how can I remove a thousand separator" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#h2 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "disable_chart_options",
+            "patterns": [ "How do I set the chart so that it cannot be dragged or resized?", "how do I disable drag and resize options for chart", "how to block drag and resize options in chart" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#h3 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "axis_scale",
+            "patterns": [ "How do I change the scale of an axis?", "scale of an axis change", "Can I change scale of axis?" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#h4 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "axis_change",
+            "patterns": [ "How do I swap the primary and secondary?", "can I swap axis?", "swap primary and secondary axis" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#h5 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "chart_type_secondary_axis",
+            "patterns": [ "How do I specify the chart type for the secondary axis?", "how can I specify the chart type for the secondary axis?", "specify the chart type for the secondary chart" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#h5 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "font_change",
+            "patterns": [ "How do I change the font settings for the labels, titles, etc. ?", "can I change font", "font settings for labels, titles etc." ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#h6 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "series_category_color",
+            "patterns": [ "How do I explicitly set the color for the series or categories (if no series are specified)?", "how to set color for the series, categories", "series, categories set color" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#h7 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "origin_change",
+            "patterns": [ "How do I change the Origin of the chart i.e., where the x-axis and y-axis intersect?", "can I change the Origin of the chart", "how to change Origin" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#h8 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "navigation_panel",
+            "patterns": [ "How do I set it up so that the navigation panel does not show up when a 3d chart is shown and disable the toggling?", "how to disable toggling", "how to hide navigation panel in 3d chart " ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#h9 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "chart_dsiplayed",
+            "patterns": [ "How do I set it up so that the chart is always displayed without any need for scroll bars?", "how to make chart without scroll bars", "how hide scroll bars for chart" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espresschart-tech-support-faq/#h10 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "export_application",
+            "patterns": [ "How do I write an application to export a chart in GIF/JPEG form without using EspressManager?", "application to export charts to gif or jpeg", "can I write an application to export a chart without using EspressManager" ],
+            "responses": [ "You can obtain it from the documentation." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "export_browser",
+            "patterns": [ "How do I use a servlet to export a chart in GIF/JPEG form to browsers?", "servlet to export a chart to gif or jpeg", "can I use a servlet to export a chart to gif or jpeg form to browsers" ],
+            "responses": [ "You can obtain it from the documentation." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "null_data_api",
+            "patterns": [ "How do I read null data in EspressAPI to replace 0 value for the purpose of eliminating colored line in stackcolumn chart?", "how can I read null data in EspressAPI", "Espress API how to replace 0 value for the purpose of eliminating colored line" ],
+            "responses": [ "Reading from a data file, the zero data is '0' or 0 and the null data '' with Chart Designer. However, the null data is null instead of '' with Chart API. This is because null is a keyword in Java but not in text file." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ER_license",
+            "patterns": [ "What should I do if I failed to register license in the ER installation?", "failed to register ER license", "ER installation license problem" ],
+            "responses": [ "In ER installation, if you failed to register license, you can go to http://www.quadbase.com/license-registration-1/ to get a new qblicense.jar, copy the new jar file and replace the original one in <ER>/lib/ directory." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ER_move_license",
+            "patterns": [ "How to move a licensed ER from one machine to another?", "ER how to move license", "EspressReport move license" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-tech-support-faq/#ii3 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ER_launch_error",
+            "patterns": [ "Failed to launch EspressReport installer with JVM current version value is 1.8 but version 1.7 is required error", "current version value is 1.8 but version 1.7 is required error", "installer with JVM error" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-tech-support-faq/#ii4 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "failed_to_retrieve_data",
+            "patterns": [ "When we tried using EspressReport and connect to MSSQL version 7.0 it gives java.sql.SQLException: Failed to retrieve data null.", "Failed to retrieve data null error", "MSSQL SQLException" ],
+            "responses": [ "Please edit espressmanager.bat and change -DBBuffer:5 to -DBBuffer:0 in order to retrieve null data from MSSQL." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "class_not_found",
+            "patterns": [ "When we tried connecting EspressReport to our database, we received a ClassNotFound exception.", "db error ClassNotFound" ],
+            "responses": [ "If you're running without EspressManager, make sure that the database driver (e.g. ojdbc14.jar) is in the classpath. If you're running with EspressManager, edit the EspressManager batch file, and add the database driver to the -classpath argument." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "failed_to_connect_to_db",
+            "patterns": [ "When we tried to connect to Oracle it gives java.sql.SQLException: Failed to connect to database.", "Oracle error Failed to connect to database" ],
+            "responses": [ "If you're running without EspressManager, make sure that the database driver (e.g. ojdbc14.jar) is in the classpath. If you're running with EspressManager, edit the EspressManager batch file, and add the database driver to the -classpath argument." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "text_truncate",
+            "patterns": [ "Does EspressReport truncate long text line?", "Does ER truncate long text line?", "Does ER truncate text" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-tech-support-faq/#re3 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "table_height",
+            "patterns": [ "How to reduce table height with Report API?", "report api reduce table height", "can Report API modify table height?" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-tech-support-faq/#re4 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "cells_change",
+            "patterns": [ "How to change background and Font of selected cell(s)?", "change background of the cell", "change font of selected cell", "can I change font or background of the cells?" ],
+            "responses": [ "Please use cell script with sample codes in espressreporthelpmanualProgramming_API.html" ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "columns_size",
+            "patterns": [ "If there are more columns than the size of the applet in a frame, where do the remaining columns go?", "where  the columns go if they exceed the applet limit ", "what happens if columns exceeds the size of the applet in a frame?" ],
+            "responses": [ "They are in the next section of the applet in the frame. You may right-click the mouse to reach the next section." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "generated_report",
+            "patterns": [ "Can report be generated without using EspressManager?", "generate report without using EspressManager", "how to generate report without EspressManager" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-tech-support-faq/#re7 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "rtp_template",
+            "patterns": [ "How to use .rpt file as a report template in Report Designer?", "can I use .rpt file as a report template ", "rpt file as a report template" ],
+            "responses": [ "Please create a new report and specify the data source. When you get to the main Report Designer window (i.e., the place where you actually design the report), go to File -> Apply Template and specify the .rpt file. This should then apply the look and feel of your existing .rpt file onto the newly created report. The same sequence can be used in API." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "file_location",
+            "patterns": [ "How to change the file location of a chart inside a report? Three options are available.", "Is file location change for a chart inside a report possible?", "Can I change the file location of a chart inside a report?" ],
+            "responses": [ "Copying the template directory to the working directory of the .class file Using the API to create the charts Use the API to change the location of the chart in the Report. You can get a handle to the cell containing the chart and edit it to change the located from a relative file location to an absolute file location (not recommended) or a URL location (recommended)." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "out_of_memory_er",
+            "patterns": [ "I get an Out of Memory Error", "out of memory problem", "error out of memory" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-tech-support-faq/#re10 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "cell_report",
+            "patterns": [ "How to get the handle to a cell in a report?", "can I get handle to cell", "is handle to cell in report possible?" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-tech-support-faq/#re11 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "pdf_no_output",
+            "patterns": [ "Why doesn't PDF output stream appear in Internet Explorer browser?", "no pdf output in iE ", "no pdf output in " ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-tech-support-faq/#re12 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "db_jdbc",
+            "patterns": [ "How do I set up a JDBC connection to my database?", "JDBC connection to db", "setup JDBC connection" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-tech-support-faq/#re13 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "java8_data_registry",
+            "patterns": [ "A Data Registry issue with Java8.", "Java8 issue", "data registry java8" ],
+            "responses": [ "Java8 has stopped supporting jdbc-odbc bridge connection. The ODBC Datasource connection in DataRegistry is still working with lower versions of java such as Java7, but not Java8. Available workaround must be used for ODBC connection to Access database if Java8 were used." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "sql_statements",
+            "patterns": [ "How do I cut, copy, and paste into the Enter SQL Statements... window?", "how to edit SQL Statements", "cut, copy and paste into the Enter SQL Statements window" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-tech-support-faq/#re15 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "scheduled_reports",
+            "patterns": [ "Why is my scheduled reports running an hour early/late?", "scheduled reports running at wrong time", "schedule reports running with hour difference" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-tech-support-faq/#re16 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "eres_freeze",
+            "patterns": [ "Why does ERES freeze when using Java 1.6 and MS SQL Server 2000?", "ERES freezes with Java 1.6", "ERES freezes with MS SQL Server 2000" ],
+            "responses": [ "The MS SQL Server 2000 JDBC Drivers have compatibility issues with Java 1.6. To solve this issue, use the MS SQL Server 2005 JDBC Drivers instead." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ER_jnlp",
+            "patterns": [ "How to solve the problem that EspressReport.jnlp launches and then disappears at once on Windows 10 with JRE 10?", "ER from .jnlp launches and then disappears in Windows 10 with JRE 10", "ER " ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-tech-support-faq/#re18 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ER_class_not_found",
+            "patterns": [ "EspressReport gives java.lang.ClassNotFoundException: quadbase.chart.CString or java.awt.HeadlessException", "quadbase.chart.CString or java.awt.HeadlessException", "java.awt.HeadlessException" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-tech-support-faq/#suli1 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "servlet_container",
+            "patterns": [ "How do I configure my servlet container to use java 1.4+ headless mode?", "can I use Java 1.4 headless mode with my servlet container", "servlet container using java 1.4 and headless mode" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-tech-support-faq/#suli2 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ER_store_procedures",
+            "patterns": [ "Does EspressReport support stored procedures?", "Does ER support stored procedures?", "Can ER store procedures" ],
+            "responses": [ "You may specify a stored procedure in the query such as EXEC store or EXEC store 'P1', 'P2' where P1, P2 are parameters into store for MSSQL and setup store on the database server. Similar stored procedure works for Oracle database where the query becomes call store (P1, P2)." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "pricelist",
+            "patterns": [ "Where can I find a pricelist?", "pricelist", "price list" ],
+            "responses": [ "Our products serve a wide range of customers with varying goals. To ensure the lowest costs and most effective results, we will create a custom package that works for you and your company's needs. Please contact our sales department at sales@quadbase.com to build your package." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_platforms",
+            "patterns": [ "Is ERES fully platform-independent?", "ERES platform support" ],
+            "responses": [ "Yes, it's written in pure java and can be run on any platform that supports Java." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_secific_industry",
+            "patterns": [ "I need to generate reports and dashboards for a very specific industry, can Quadbase help?", "can ERES generate reports for very specific industry", "can quadbase help with specific industry requirements" ],
+            "responses": [ "Our support team stands ready to help you design professional reports and dashboards for your targeted audience. We can even use samples from your actual data to provide meaningful templates and examples. Please contact Quadbase support at support@quadbase.com to discuss with a representative regarding your specific requirements. For more involved projects, please inquire about our professional services." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_file_extesions",
+            "patterns": [ "What file extensions are used in ERES?", "ERES file extensions", "what file extension I can use in ERES" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-es-tech-support-faq/#g4 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_look",
+            "patterns": [ "The default ERES look doesn't match our company's webpage/IS.", "Can I change ERES look", "ERES design change" ],
+            "responses": [ "The ERES appearance can be easily modified without any programming by using the customization feature found under the Admin Console." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_license",
+            "patterns": [ "How to move a licensed ERES from one machine to another?", "ERES license transfer to new machine", "Can I move ERES license to another machine?" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-es-tech-support-faq/#g6 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_install_problem",
+            "patterns": [ "Why can't I Install ERES? / I get a no Java virtual machine installed message when trying to install ERES.", "ERES install problem", "no JVM error during ERES installation" ],
+            "responses": [ "ERES requires a Oracle / Sun Java Development Kit (JDK) installed on your machine to install and run. If you only have a Java Runtime Environment (JRE) or if you don't have Java at all, please visit the Java SE Download Page and download the latest JDK. If you have both JDK and JRE installed, make sure to select the JDK folder on the select Java VM panel in the installer." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_no_jvm",
+            "patterns": [ "I get a no Java virtual machine installed message when trying to install ERES.", "no JVM error during ERES installation" ],
+            "responses": [ "ERES requires a Oracle / Sun Java Development Kit (JDK) installed on your machine to install and run. If you only have a Java Runtime Environment (JRE) or if you don't have Java at all, please visit the Java SE Download Page and download the latest JDK. If you have both JDK and JRE installed, make sure to select the JDK folder on the select Java VM panel in the installer." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_windows",
+            "patterns": [ "Does ERES run well under Windows 7 (or Vista, 2008...)/macOS/Linux?", "can ERES run on Windows", "Is Windows good for ERES" ],
+            "responses": [ "Absolutely. One of the advantages of having a Java based product is that it can run on any OS that supports Java." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_browser_support",
+            "patterns": [ "Which browsers do ERES support?", "ERES supported browsers" ],
+            "responses": [ "Internet Explorer (6+), Safari and Firefox. The Java plugin is required for designers using the Organizer. JavaScript and cookies must be enabled for all users." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_cant_sart",
+            "patterns": [ "I can't start ERES", "ERES start problem", "I can't run ERES" ],
+            "responses": [ "First, start Tomcat by navigating to /bin/ and running startup.bat on Windows or startup.sh on Unix/Linux/Mac/etc. Next, open ERES start page in your favorite browser, the default address is http://:8080/ERES, but this can be altered during installation. Finally, click the Start button in the ERES Server section." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_java",
+            "patterns": [ "What Java version should I use?", "what java version to use with ERES", "recommended java version for ERES" ],
+            "responses": [ "The ERES Server requires Sun Java Development Kit (JDK) version 1.5.  Any designers using the Organizer will need to have a JRE plugin for their browser. No Java is required to use the QuickDesigner, Map Builder, and Dashboard Builders remotely, and end users do not need Java to view finished reports, charts, maps, and dashboards." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_install_options",
+            "patterns": [ "I am not sure how to set some options during installation process.", "settings options during installation ", "ERES installation options" ],
+            "responses": [ "You may find an answer in the User Guide." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_database",
+            "patterns": [ "What is an ERES database?", "ERES database", "ERES default database" ],
+            "responses": [ "The ERES Database stores data critical to the ERES system such as the Organizer file structure, security and permissions, etc. This is not to be confused with the data sources you will use to create reports and charts." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_failed_register_license",
+            "patterns": [ "What should I do if I failed to register license in the ERES installation?", "ERES installation failed to register license", "ERES failed to register license" ],
+            "responses": [ "In ERES installation, if you failed to register license, you can go to http://www.quadbase.com/license-registration-1/ to get a new qblicense.jar, remove each original qblicense.jar in <ERES>/lib/ and <ERES>/WEB-INF/lib/ and copy the new jar file into these two directories." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_organizer_suse",
+            "patterns": [ "How to run ERES70 organizer on SUSElinux 12 sp3", "ERES Organizer on SUSE Linux", "Can ERES Organizer run on SUSE Linux?" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-es-tech-support-faq/#pgs9 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "export_pdf_xls",
+            "patterns": [ "When I export a report to PDF/XLS in IE7+, a yellow bar with warning message shows up (To help protect your security, Internet Explorer blocked this site from downloading files to your computer. Click here for options...).", "Internet Explorer warning message if exporting to PDF or XLS", "IE export to PDF or XLS shows up warning message" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-es-tech-support-faq/#wwe1 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_class_not_found",
+            "patterns": [ "I can't connect to my database (MSSQL, Oracle...). I get ClassNotFound error.", "error ClassNotFound while connecting to database", "an error ClassNotFound is displayed when connecting to the database" ],
+            "responses": [ "You need to copy the correct database driver to the /WEB-INF/lib/ directory and restart the server. If using API, make sure to add the driver to the classpath. See this FAQ for details." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_update_license",
+            "patterns": [ "How do we update the license after we copied/moved ERES to a new machine?", "ERES license update", "ERES copied or moved license" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-es-tech-support-faq/#wwe3 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_evaluation",
+            "patterns": [ "After updating our ERES install, the evaluation message is displayed in reports and charts.", "ERES evaluation message in reports and charts", "ERES evaluation message after updating" ],
+            "responses": [ "Go to /register.jsp to generate a new qblicense.jar and copy and paste it into /lib/ and /WEB-INF/lib/ directories." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "big_reports_charts",
+            "patterns": [ "Export of big reports and charts are really slow / I get Out of memory or Java heap space error exporting big reports and charts.", "Out of memory or Java heap space error while exporting a lot of data", "export of big datasource is slow" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-es-tech-support-faq/#wwe5 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_organizer_wont_start",
+            "patterns": [ "ERES Organizer won't start.", "Can't start ERES Organizer", "ERES Organizer start problem " ],
+            "responses": [ "If you are using .bat file, make sure that the ERES server is running. You might need to check your firewall settings as well and ensure that your machine is able to access the server host and the server port. If running from the web page, please make sure you have a JRE plugin installed on your browser." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_dataregistry_java8",
+            "patterns": [ "A Data Registry issue with Java8.", "ERES data registry problem with Java 8", "Problem in ERES Data registry with Java 8" ],
+            "responses": [ "Java8 has stopped supporting jdbc-odbc bridge connection. The ODBC Datasource connection in DataRegistry is still working with lower versions of java such as Java7, but not Java8. Available workaround must be used for ODBC connection to Access database if Java8 were used." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "dashboard_problem",
+            "patterns": [ "I moved a dashboard to other location and it isn't working properly.", "dashboard is not working properly after moving to another location", "dashboard problem after moving to another location" ],
+            "responses": [ "Use the Dashboard and Map Packages  feature described here (navigate to section 2.1.4.4). It allows you to pack all files that are connected with the dashboard into a single file which can be easily moved elsewhere." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "exported_pdf_problems",
+            "patterns": [ "I exported a report or chart to PDF and fonts in the PDF are different from fonts in the ChartDesigner. / I have problems displaying Unicode characters in exported PDF.", "exported PDF have different from fonts in the ChartDesigner", "problem with displaying Unicode characters in exported PDF" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-es-tech-support-faq/#wwe9 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "export_unicode_error",
+            "patterns": [ "I have problems displaying Unicode characters in exported PDF.", "problem with displaying Unicode characters in exported PDF" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-es-tech-support-faq/#wwe9 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_map",
+            "patterns": [ "ERES Maps aren't working.", "ERES Maps problem", "Maps are not working in ERES" ],
+            "responses": [ "Obtain Google maps API key. Please, keep in mind that you have to fill in the host name or IP address that will be used for connecting to ERES Maps. For example: If you fill in your domain name, Google Maps will not work when you connect to ERES using IP address." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_map_data",
+            "patterns": [ "Maps aren't showing all of my data.", "ERES maps aren't showing all data", "ERES maps do not display the correct data" ],
+            "responses": [ "Make sure that you are using correct coordinates file." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "virtual_directory",
+            "patterns": [ "What is a Virtual Directory?", "Virtual Directory" ],
+            "responses": [ "When you want to add a file that is not currently accessible via your web server (Tomcat...), you have to manually add a URL that points to a folder that contains the file." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "scheduler_emails",
+            "patterns": [ "In scheduler, I chose Email delivery, but no emails are sent.", "scheduler did not send emails", "problems with sending emails in the scheduler" ],
+            "responses": [ "Make sure to add your SMTP settings in the Admin Console. After you do so, restart the ERES server and try it again." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "eres_null_pointer",
+            "patterns": [ "I got a java.lang.NullPointerException error when working in QuickDesigner, MapsDesigner, etc.", "error java.lang.NullPointerException", "error java.lang.NullPointerException error is displayed when working in the product" ],
+            "responses": [ "Did you use back button in your browser? Please, don't use browser back and forward buttons when working in ERES." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "report_chart_move",
+            "patterns": [ "I moved a report with charts/subreports to other machine and the subreports/charts are missing.", "subreports are missing after moving the report", "drilldowns are missing after moving the chart" ],
+            "responses": [ "Moving components of a report can become cumbersome, we recommend that you create PAK file for the report and simply move the PAK file." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_change_data_source",
+            "patterns": [ "I changed a data source (for example: query) in Organizer, but the changes did not appear in a report that uses this datasource.", "datasource changes in Organizer do not appear in the report", "datasource changes do not appear in the report" ],
+            "responses": [ "The data source in the report is not linked with the data source in the data registry. You can either modify the data source in the report, or use the update option described here. Please note that there are certain requirements before you can use the update option." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "AC_options",
+            "patterns": [ "I have modified some configuration files/options in Admin Console, but the ERES is still using the old settings.", "Admin Console changes do not appear in ERES", "Changes in Admin Console are not saved and are not visible in ERES" ],
+            "responses": [ "Please restart the ERES Server. In order to shut the ERES Server down, you need to be logged in as an administrator." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "saved_location",
+            "patterns": [ "I made a report/chart/dashboard, saved it, but forgot to insert it into organizer. Where do I find the file and how do I save it into Organizer?", "where the created reports, charts, dashboards are stored and how they can be inserted into the Organizer.", "how to insert stored chart, reports, dashboard into Organizer" ],
+            "responses": [ "Files are saved into the ReportFiles/ChartFiles/DashboardFiles directory by default. You can open the Organizer, click Insert new file to current folder button and insert the file." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "single_sign_on",
+            "patterns": [ "How to do single sign-on? How to embed reports, dashboards in custom web pages?", "Is single sign-on possible?", "How to embed reports in custom pages?", "How to embed dashboards in custom pages?" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-es-tech-support-faq/#wwe19 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "embed_reports",
+            "patterns": [ "How to embed reports, dashboards in custom web pages?", "How to embed reports in custom pages?", "How to embed dashboards in custom pages?" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-es-tech-support-faq/#wwe19 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_organizer_jar",
+            "patterns": [ "ERES Organizer loads incorrect jar files, how to resolve it?", "ERES Organizer load wrong jar files" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-es-tech-support-faq/#wwe20 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_jdbc_connection",
+            "patterns": [ "How do I set up a JDBC connection to my database?", "ERES how to set JDBC connection to database", "ERES JDBC connection to database" ],
+            "responses": [ "Detailed information can be found here: https://www.quadbase.com/espressreport-es-tech-support-faq/#a1 ." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "excle_export_api",
+            "patterns": [ "Excel export isn't working in API", "API problem when exporting to excel foramts", "Excel formats export API problem" ],
+            "responses": [ "Add correct version of POI library to your classpath, it can be found under /WEB-INF/lib/." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "jat_classpath",
+            "patterns": [ "Which JAR files do I have to add to my classpath if I want to work with the API?", "which jar files to add to calssapth to make the API work" ],
+            "responses": [ "Add at least ERESOrganizer.jar, ERESServer.jar and qblicence.jar. You might also need to add certain 3rd party jars like poi-30.jar (for Excel export), axercesImpl.jar and xml-apis.jar (for working with XML), FlashExport.jar (exporting to Flash), ExportLib.jar (PNG and other image formats), and database drivers (depend on the database you will be using)." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "api_exports_evaluation",
+            "patterns": [ "I exported some reports via API, but there is evaluation copy... message in the reports", "evaluation message when exporting via API", "reports exported via API have evaluation copy message" ],
+            "responses": [ "If you are running an evaluation copy, please contact our sales office (sales@quadbase.com) to get a release license key. Otherwise, make sure that you have added the correct qblicence.jar file into your classpath." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "ERES_server_api",
+            "patterns": [ "Does the ERES Server need to be running if I want to generate reports via ERES API?", "Does the ERES Server need to be turned on to use ERES report API", "Can I use ERES API to generate report without ERES Server" ],
+            "responses": [ "It's up to you. Your application can be fully independent, or you can connect to the ERES Server. Pros and cons of both approaches are described in the manuall." ],
+            "context": [ "" ]
+        },
+        {
+            "tag": "API_examples",
+            "patterns": [ "I don't know how to start, are there some working API examples with source code available?", "API examples", "API examples with source code" ],
+            "responses": [ "Yes, after starting the ERES server, click on the Quick Start API Examples link on the front page. There are some examples in the User's Guide and in the ERES installation directory." ],
+            "context": [ "" ]
+        }
+    ]
+}
